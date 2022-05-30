@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/local/cuda/**",
+                "/usr/local/cuda/include/**",
+                "/usr/include/**",
+                "/usr/local/include/**",
+                "/usr/local/TensorRT/include/**",
+                "/usr/local/include/pybind11/**",
+                "./**"
+            ],
+            "browse":
+            {
+                "path":
+                [
+                    "/usr/local/cuda/**",
+                    "/usr/local/cuda/include/**",
+                    "/usr/include/**",
+                    "/usr/local/include/**",
+                    "/usr/local/TensorRT/include/**",
+                    "/usr/local/include/pybind11/**",
+                    "./**"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "/usr/bin/g++-9",
+            "cppStandard": "c++20",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
