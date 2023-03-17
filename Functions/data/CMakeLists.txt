@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.0)
+project(data)
+
+set(INC ${INC} ${PROJECT_SOURCE_DIR})
+file(GLOB CUSTOM_TYPE_SRC ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+set(SRC ${SRC} ${CUSTOM_TYPE_SRC})
+
+# Target
+add_library(${PROJECT_NAME} SHARED ${SRC})
+target_include_directories(${PROJECT_NAME} PUBLIC ${INC})
+target_link_libraries(${PROJECT_NAME} PUBLIC ${LIB})
+target_compile_definitions(${PROJECT_NAME} PUBLIC DATA_VERSION=1)
+
+# Install
+install(
+  TARGETS ${PROJECT_NAME}
+  LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+  RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
+  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME})
