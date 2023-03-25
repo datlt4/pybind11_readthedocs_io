@@ -192,7 +192,7 @@ PYBIND11_MODULE(mymodule, m)
         "bark",
         [](Dog *dog) -> std::string {
             if (dog)
-                return "woof!"; /* Called with a Dog instance */
+                return "woof!";    /* Called with a Dog instance */
             else
                 return "(no dog)"; /* Called with None, dog == nullptr */
         },

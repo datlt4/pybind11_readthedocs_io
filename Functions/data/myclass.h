@@ -21,7 +21,7 @@ class MyClass
     void delitem(int index);
     std::string str() const;
 
-    int &operator[](std::size_t index) const ;
+    int &operator[](std::size_t index) const;
     MyClass operator+(const MyClass &other) const;
     std::string text;
     int *m_data;

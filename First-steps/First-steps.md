@@ -10,6 +10,7 @@
 cd build
 cmake ..
 make -j$(nproc)
+make install
 ```
 
 # Import
